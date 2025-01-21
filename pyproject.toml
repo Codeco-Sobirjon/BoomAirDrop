@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Konstantin <anisimovkosta19@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "^2.0.31"
+testcontainers = {extras = ["postgres"], version = "^4.7.1"}
+psycopg = {extras = ["binary"], version = "^3.2.1"}
+deepface = "^0.0.92"
+tf-keras = "^2.16.0"
+filetype = "^1.2.0"
+fastapi = "^0.111.0"
+alembic = "^1.13.2"
+asgi-ratelimit = {extras = ["full"], version = "^0.10.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tools.pyright]
+exclude = ["venv"]
+venv-path = "."
+venv = ".venv"
